@@ -9,13 +9,11 @@ import java.util.Scanner;
  */
 public class Main_10809 {
     public static void main(String[] args) {
-
-
         Scanner scan = new Scanner(System.in);
 
 
         int[] arr = new int[26]; //알파벳의 갯수만큼 인덱스를 체크하는 배열
-        for(int i = 0; i < arr.length; i++){
+        for(int i =0; i < arr.length; i++){
             arr[i] = -1; //모두 -1로 초기화시켜서 사용되는 알파벳만 숫자가 바뀌도록 선언
         }
         String str = scan.nextLine(); // 띄어쓰기 포함해야 하기 때문에 nextLine() 사용;
@@ -32,9 +30,6 @@ public class Main_10809 {
             System.out.print(arr[i] + " ");
         }
         scan.close();
-
-
-
 
     }
 }
