@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+//3052 - 나머지
 //-2중 for 문 (앞자리와 뒷자리의 비교를 위함. 뒷자리는 앞자리보다 인덱스가 +1 높아야한다.)
 public class Main_3052 {
     public static void main(String[] args) throws IOException {
