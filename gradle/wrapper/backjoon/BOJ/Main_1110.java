@@ -22,17 +22,14 @@ N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작
             scan.close();
             int copy_a = a;
             int count = 0;
-            while(true) {
+            do {
                 int left = a / 10;  //반복문을 돌 때 마다 새로운 수가 연산에 포함되야 하기 때문에 지역변수로 설정해야 한다.
                 int right = a % 10; //전역 변수로 설정하게 되면, 초기 a값만 연산에 포함되어 무한루프에 걸린다.
                 a = (right * 10) + ((left+right)%10);
                 //right * 10 = 연산하는 수의 10의 자리 수
                 //(left+right) %10 = 연산하는 수의 1의 자리 수
                 count++;
-                if(a==copy_a) {
-                    break;
-                }
-            }
+            }while(a != copy_a);
             System.out.println(count);
         }
     }
