@@ -1,21 +1,28 @@
 package gradle.wrapper;
 
 
-import java.util.Scanner;
-public class Main{
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int count = 0;
-        int copy_a = a;
-        scan.close();
-         do{
-            int left = a / 10;
-            int right = a % 10;
-            a = (right * 10) + ((left + right) % 10);
-            count++;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-        }while(a != copy_a);
-        System.out.println(count);
+import java.util.StringTokenizer;
+
+public class Main {
+    public static void main(String[] args) throws IOException{
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st = new StringTokenizer(br.readLine()," ");
+    int sum = 0;
+    int result = 0;
+    int[] arr = new int[5];
+    for(int i = 0; i < 5;i++){
+        int n = Integer.parseInt(st.nextToken());
+        if(n >=0 && n<10) {
+            arr[i] = n * n;
+            sum += arr[i];
+        }
     }
-    }
+        result =  sum % 10;
+        System.out.println(result);
+
+}
+}
